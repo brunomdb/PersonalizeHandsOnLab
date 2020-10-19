@@ -30,7 +30,7 @@ This lab will walk you through the following:
 
 ![](images/personalize-guide-img03.png)
 
-3. Explore the available resources and the actions that can be performed to deploy your own solution through the Amazon Personalize console. It is not necessary to create or change any additional resource at this point. In the following steps, we are going to use an Amazon Sagemaker Notebook in order to programatically create a new Personalize campaign using the [AWS SDK for Python (Boto3)](https://aws.amazon.com/sdk-for-python/).
+3. Explore the available resources and the actions that can be performed to deploy your own solution through the Amazon Personalize console. It is not necessary to create or change any additional resource at this point. In the following steps, we are going to use an Amazon Sagemaker Notebook in order to programmatically create a new Personalize campaign using the [AWS SDK for Python (Boto3)](https://aws.amazon.com/sdk-for-python/).
 
 ## Video Recommendation App
 
@@ -38,7 +38,7 @@ Your Personalize environment has also deployed a Video Recommendation applicatio
 
 ![](images/appRecNoModels.png)
 
-Whilst this application could be deployed anywhere, it uses both an EC2 Amazon Machine Image (AMI) and RDS Snapshot that have been stored in the North Virgina Region of AWS (us-east-1).  Hence, please make sure that the Region selected in the AWS Console is alway **US East (N.Virginia)**, as shown in the following diagram.  The workshop will only function correctly if the EC2 configuration, CloudFormation template executiion and SageMaker notebook are all using this AWS Region.
+Whilst this application could be deployed anywhere, it uses both an EC2 Amazon Machine Image (AMI) and RDS Snapshot that have been stored in the North Virginia Region of AWS (us-east-1).  Hence, please make sure that the Region selected in the AWS Console is alway **US East (N.Virginia)**, as shown in the following diagram.  The workshop will only function correctly if the EC2 configuration, CloudFormation template execution and SageMaker notebook are all using this AWS Region.
 
 ![](images/personalize-guide-img01.png)
 
@@ -56,7 +56,7 @@ Whilst this application could be deployed anywhere, it uses both an EC2 Amazon M
 
 ![](images/personalize-guide-img05.png)
 
-3. You will be prompted with a Jupyter directory containing all the material necessary to acomplish the creation of the a new user personalization campaign from our lab notebook. To start, you can click on the notebook **.ipynb** file and the lab notebook will open. You can now begin to work through the lab notebook.
+3. You will be prompted with a Jupyter directory containing all the material necessary to accomplish the creation of the a new user personalization campaign from our lab notebook. To start, you can click on the notebook **.ipynb** file and the lab notebook will open. You can now begin to work through the lab notebook.
 
 ### Working Through a Jupyter Notebook
 
@@ -88,7 +88,7 @@ Whilst this application could be deployed anywhere, it uses both an EC2 Amazon M
 
     ![Dataset groups](images/datasetGroups.png)
 
-2. The left-hand side, which will show you the solution that you're currently creating via your notebook.  Then, select **Solutions and recipes**, then click on the **Create solution** button.
+2. On the left-hand side menu, click on **Solutions and recipes**, which will show you the solution that you're currently creating via your notebook. Then click on the **Create solution** button.
 
    ![Solution list](images/solutionList.png)
 
@@ -98,11 +98,11 @@ Whilst this application could be deployed anywhere, it uses both an EC2 Amazon M
 
 4. In the following screen just hit the **Finish** button and a new solution version will start to be created.
 
-    
+     
 
 ## Create Personal Ranking Solution
 
-1. Let's do exactly the same thing again, but this time we'll create a ranking solition.  From the **Solutions and Recipes** screen that you are on, click **Create solution**, give it a name like *rankings-solution*, ensure it's a **Manual** recipe selection but this time select the **aws-personalized-ranking** recipe.  Click **Next** and **Finished** as before
+1. Let's do exactly the same thing again, but this time we'll create a ranking solution.  From the **Solutions and Recipes** screen that you are on, click **Create solution**, give it a name like *rankings-solution*, ensure it's a **Manual** recipe selection but this time select the **aws-personalized-ranking** recipe.  Click **Next** and **Finished** as before
 
    ![](images/recipeRanking.png)
 
@@ -186,9 +186,9 @@ Each of these modes allows multiple models of their type to be used, but each mo
 
 10. You can step through users to see how these look for different demographics of users.  If you had mutiple Recommendation models defined then they would also be in the two model drop-downs, and you'd be able to show two completely different recommendation models, based upon different user demographic or item metadata, allowing you to compare and contrast different approaches.
 
-11. **(Optinal, if you previously created a Personal Ranking campaign)** Try out the **Personal Ranking** personalize mode - this takes a list of the most popular movies in the dataset, either as a whole or in just a single genre.  This will take that list and re-rank it into an order for this particular user, ensuring that the ones that are most likely to be interested in are shown first.
+11. **(Optional, if you previously created a Personal Ranking campaign)** Try out the **Personal Ranking** personalize mode - this takes a list of the most popular movies in the dataset, either as a whole or in just a single genre.  This will take that list and re-rank it into an order for this particular user, ensuring that the ones that are most likely to be interested in are shown first.
 
-12. **(Optinal, if you previously created a Similar Items campaign)** Finally, try the **Similar Items** personalize mode - this starts with the user's top-ranked film, and finds a list of films that people who watched this also watched.  This is done without reference to the user's preferences, and the list is generated based upon what's in the dataset as a whole.  However, if you also have a **Personal Ranking** model defined then the **Ordering** drop-down will re-rank this list into one that is more suited to the user's preferences.
+12. **(Optional, if you previously created a Similar Items campaign)** Finally, try the **Similar Items** personalize mode - this starts with the user's top-ranked film, and finds a list of films that people who watched this also watched.  This is done without reference to the user's preferences, and the list is generated based upon what's in the dataset as a whole.  However, if you also have a **Personal Ranking** model defined then the **Ordering** drop-down will re-rank this list into one that is more suited to the user's preferences.
 
 # Conclusion
 
